@@ -9,7 +9,7 @@ os.chdir('C:/Users/ADELEKE OLADAPO/Documents/Vetsark/Vetsark/sample_projects/web
 
 app = Flask(__name__, template_folder='templates')
 
-model = load_model('model/test_model')
+model = load_model('test_model')
 cols = ['age', 'sex', 'bmi', 'children', 'smoker', 'region']
 
 @app.route('/')
