@@ -1,5 +1,5 @@
 from flask import Flask,request, url_for, redirect, render_template, jsonify
-from pycaret.regression import *
+from pycaret.regression import load_model, predict_model
 import pandas as pd
 import pickle
 import numpy as np
@@ -7,7 +7,7 @@ import os
 
 os.chdir('C:/Users/ADELEKE OLADAPO/Documents/Vetsark/Vetsark/sample_projects/web_app/')
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)# template_folder='templates')
 
 model = load_model('test_model')
 cols = ['age', 'sex', 'bmi', 'children', 'smoker', 'region']
